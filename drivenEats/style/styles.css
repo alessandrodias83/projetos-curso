@@ -45,9 +45,72 @@ main {
     flex-direction: column;
 }
 
+section {
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+}
 
+.opcoes-pratos,
+.opcoes-bebidas,
+.opcoes-sobremesas {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
+.titulo-pedido h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: #000000;
+    margin-top: 10px;
+    margin-left: 19px;
+}
 
+button.opcao {
+    width: 172px;
+    height: 216px;
+    background-color: #ffffff;
+    margin: 16px;
+    border: 5px solid #ffffff;
+    cursor: pointer;
+    text-align: justify;
+    border-radius: 9px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+button.opcao img {
+    width: 144px;
+    height: 87px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+button.opcao .titulo-item {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+button.opcao .descricao-item {
+    font-size: 15px;
+    font-weight: 300;
+    color: #a6a6a6;
+    margin-bottom: 10px;
+}
+
+button.opcao .preco-item {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+}
+
+button.opcao.selecionado {
+    border: 5px solid #32b72f;
+}
 
 
 
