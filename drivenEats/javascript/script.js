@@ -59,3 +59,52 @@ function mostrarResumo() {
     document.getElementById('resumo-bebida').textContent = `Bebida: ${bebidaSelecionadaTexto}`;
     document.getElementById('resumo-sobremesa').textContent = `Sobremesa: ${sobremesaSelecionadaTexto}`;
 }
+
+function fecharResumo() {
+    const overlay = document.getElementById('resumo-overlay');
+    overlay.style.display = 'none'
+}
+
+function confirmarPedido() {
+    
+    resetarSelecoes();
+    fecharResumo();
+}
+
+function confirmarPedido() {
+    const whatsappNumber = "5531997736049";
+
+    const mensagem = `Olá, gostaria de fazer o seguinte pedido: \n\n` +
+                    `${pratoSelecionadoTexto}\n` +
+                    `${bebidaSelecionadaTexto}\n` +
+                    `${sobremesaSelecionadaTexto}\n\n` + 
+                    `Total: R$ ${ (precoPrato + precoBebida + precoSobremesa).toFixed(2) }`;
+
+    const mensagemCodificada = encodeURIComponent(mensagem);
+
+    const url = `https://wa.me/${5531997736049}?text=${mensagemCodificada}`;
+
+    window.open(url, '_blank');
+
+    resetarSelecoes();
+    fecharSelecoes();
+}
+
+function resetarSelecoes() {
+    pratoSelecionado = false;
+    bebidaSelecionada = false;
+    sobremesaSelecionada = false;
+
+    pratoSelecionadoTexto = "";
+    bebidaSelecionadaTexto = "";
+    sobremesaSelecionadaTexto = "";
+
+    precoPrato = 0;
+    precoBebida = 0;
+    precoSobremesa = 0;
+
+    const botoes = document.querySelectorAll('.opcao');
+    botoes.forEach(botao => botao.classList.remove('selecionado'));
+
+    ativarBotao();
+}
