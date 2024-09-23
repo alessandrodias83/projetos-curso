@@ -35,4 +35,19 @@ function selecionar(tipo, elemento) {
         precoSobremesa = parseFloat(elemento.getAttribute("data-preco"));
     }
 
+    ativarBotao()
+
+}
+
+function ativarBotao() {
+    const botao = document.getElementById('fechar-pedido');
+
+    if (pratoSelecionado && bebidaSelecionada && sobremesaSelecionada) {
+        botao.disabled = false;
+        botao.classList.add('ativo');
+        botao.textContent = "Fechar pedido"
+    } else {
+        botao.disabled = true;
+        botao.classList.remove('ativo');
+    }
 }
