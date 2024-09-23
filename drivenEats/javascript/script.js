@@ -51,3 +51,11 @@ function ativarBotao() {
         botao.classList.remove('ativo');
     }
 }
+
+function mostrarResumo() {
+    const overlay = document.getElementById('resumo-overlay');
+
+    document.getElementById('resumo-prato').textContent = `Prato: ${pratoSelecionadoTexto}`;
+    document.getElementById('resumo-bebida').textContent = `Bebida: ${bebidaSelecionadaTexto}`;
+    document.getElementById('resumo-sobremesa').textContent = `Sobremesa: ${sobremesaSelecionadaTexto}`;
+}

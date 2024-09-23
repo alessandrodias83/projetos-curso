@@ -161,6 +161,67 @@ button.opcao.selecionado {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.resumo h2 {
+    margin-bottom: 20px;
+    margin-top: 21px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.resumo p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.resumo strong {
+    font-size: 18px;
+}
+
+.acoes {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acoes button,
+.acoes a {
+    width: 329px;
+    height: 52px;
+    font-size: 16px;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.acoes button {
+    background-color: #ffffff;
+    color: #50d074;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 700;
+    transition: background-color 0.3s;
+}
+
+.acoes a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+}
+
+#resumo-prato,
+#resumo-bebida,
+#resumo-sobremesa,
+#resumo-total {
+    color: #ffffff;
+}
+
+
 footer {
     background-color: #ffffff;
     width: 414px;
