@@ -31,19 +31,19 @@
                     <h2>Primeiro, seu prato</h2>
                 </div>
                 <div class="opcoes-pratos">
-                    <button class="opcao">
+                    <button class="opcao" data-preco="25.00" onclick="selecionar()">
                         <img src="img/pf_frango.jpg" alt="">
                         <h3 class="titulo-item">Frango Yin Yang</h3>
                         <h4 class="descricao-item">Acompanha salada, arroz, feijão e farofa</h4>
                         <p class="preco-item">25.00</p>
                     </button>
-                    <button class="opcao">
+                    <button class="opcao" data-preco="20.00" onclick="selecionar()">
                         <img src="img/pf_calabresa.png" alt="">
                         <h3 class="titulo-item">PF Calabresa</h3>
                         <h4 class="descricao-item">Acompanha arroz, feijão e fritas</h4>
                         <p class="preco-item">30.00</p>
                     </button>
-                    <button class="opcao">
+                    <button class="opcao" data-preco="20.00" onclick="selecionar()">
                         <img src="img/pf_carne.jpg" alt="">
                         <h3 class="titulo-item">PF Boi</h3>
                         <h4 class="descricao-item">Acompanha arroz, feijão, salada e ovo</h4>
@@ -51,24 +51,25 @@
                     </button>
                 </div>
             </section>
+
             <section id="bebidas">
                 <div class="titulo-pedido">
                     <h2>Agora, sua bebida</h2>
                 </div>
                 <div class="opcoes-bebidas">
-                    <button class="opcao">
+                    <button class="opcao" data-preco="4.90" onclick="selecionar()">
                         <img src="img/coca.png" alt="">
                         <h3 class="titulo-item">Coquinha gelada</h3>
                         <h4 class="descricao-item">Lata 350 ml</h4>
                         <p class="preco-item">4.90</p>
                     </button>
-                    <button class="opcao">
+                    <button class="opcao" data-preco="4.70" onclick="selecionar()">
                         <img src="img/fanta.png" alt="">
                         <h3 class="titulo-item">Fanta Laranja</h3>
                         <h4 class="descricao-item">Lata 350 ml</h4>
                         <p class="preco-item">4.70</p>
                     </button>
-                    <button class="opcao">
+                    <button class="opcao" data-preco="8.00" onclick="selecionar()">
                         <img src="img/suco.png" alt="">
                         <h3 class="titulo-item">Suco de Laranja</h3>
                         <h4 class="descricao-item">Jarra de 500 ml</h4>
@@ -76,24 +77,25 @@
                     </button>
                 </div>
             </section>
+
             <section id="sobremesas">
                 <div class="titulo-pedido">
                     <h2>Por fim, sua sobremesa</h2>
                 </div>
                 <div class="opcoes-sobremesas">
-                    <button class="opcao">
+                    <button class="opcao" data-preco="8.00" onclick="selecionar()">
                         <img src="img/brownie.jpg" alt="">
                         <h3 class="titulo-item">Brownie</h3>
                         <h4 class="descricao-item">Sabor chocolate</h4>
                         <p class="preco-item">8.00</p>
                     </button>
-                    <button class="opcao">
+                    <button class="opcao" data-preco="9.00" onclick="selecionar()">
                         <img src="img/pudim.jpg" alt="">
                         <h3 class="titulo-item">Pudim</h3>
                         <h4 class="descricao-item">Leite condensado</h4>
                         <p class="preco-item">9.00</p>
                     </button>
-                    <button class="opcao">
+                    <button class="opcao" data-preco="7.00" onclick="selecionar()">
                         <img src="img/mouse.jpg" alt="">
                         <h3 class="titulo-item">Mouse</h3>
                         <h4 class="descricao-item">Sabor maracuja</h4>
@@ -105,9 +107,9 @@
     </main>
 
     <footer>
-        <buton id="fechar-pedido">Selecione os 3 itens <br> para fechar o pedido</buton>
+        <buton id="fechar-pedido" disabled onclick="mostrarResumo()">Selecione os 3 itens <br> para fechar o pedido</buton>
 
-        <div class="overlay">
+        <div class="overlay" id="resumo-overlay" style="display: none;">
             <div class="resumo">
                 <h2>Confirme seu pedido</h2>
                 <p id="resumo-prato"></p>
@@ -117,8 +119,8 @@
                 <p><strong><span id="resumo-total"></span></strong></p>
 
                 <div class="acoes">
-                    <button>Tudo certo, pode pedir!</button>
-                    <a href="#">Cancelar</a>
+                    <button onclick="confirmarPedido()">Tudo certo, pode pedir!</button>
+                    <a href="#" onclick="fecharResumo()">Cancelar</a>
                 </div>
             </div>
         </div>
