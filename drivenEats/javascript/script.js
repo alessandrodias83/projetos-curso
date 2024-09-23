@@ -1,0 +1,38 @@
+let pratoSelecionado = false;
+let bebidaSelecionada = false;
+let sobremesaSelecionada = false;
+
+let pratoSelecionadoTexto = "";
+let bebidaSelecionadaTexto = "";
+let sobremesaSelecionadaTexto = "";
+
+let precoPrato = 0;
+let precoBebida = 0;
+let precoSobremesa = 0;
+
+function selecionar(tipo, elemento) {
+    const botoes = document.querySelectorAll(`#${tipo}s .opcao`);
+
+    botoes.forEach(botao => botao.classList.remove('selecionado'));
+
+    elemento.classList.add('selecionado');
+
+    if (tipo === 'prato') {
+        pratoSelecionado = true;
+        pratoSelecionadoTexto = elemento.textContent;
+        precoPrato = parseFloat(elemento.getAttribute("data-preco"));
+    }
+
+    if (tipo === 'bebida') {
+        bebidaSelecionada = true;
+        bebidaSelecionadaTexto = elemento.textContent;
+        precoBebida = parseFloat(elemento.getAttribute("data-preco"));
+    }
+
+    if (tipo === 'sobremesa') {
+        sobremesaSelecionada = true;
+        sobremesaSelecionadaTexto = elemento.textContent;
+        precoSobremesa = parseFloat(elemento.getAttribute("data-preco"));
+    }
+
+}
