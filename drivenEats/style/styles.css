@@ -15,8 +15,8 @@ header {
     flex-direction: column;
     position: fixed;
     top: 0;
-    margin-bottom: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 2;
 }
 
 .logo {
@@ -43,6 +43,10 @@ main {
     width: 414px;
     display: flex;
     flex-direction: column;
+}
+
+.container {
+    height: 100%;
 }
 
 section {
