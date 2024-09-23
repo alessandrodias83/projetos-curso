@@ -10,6 +10,7 @@ header {
     background-color: #cf2b2b;
     height: 92px;
     width: 414px;
+    max-width: 414px;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -34,4 +35,42 @@ header {
     color: #ffffff;
     margin-bottom: 18px;
     margin-left: 21px;
+}
+
+main {
+    margin-top: 92px;
+    margin-bottom: 92px;
+    width: 414px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+footer {
+    background-color: #ffffff;
+    width: 414px;
+    max-width: 414px;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > button {
+    background-color: #cbcbcb;
+    height: 61px;
+    width: 364px;
+    max-width: 364px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    border: none;
 }
