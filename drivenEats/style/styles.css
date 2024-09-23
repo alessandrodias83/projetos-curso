@@ -1,0 +1,37 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #eeeeee;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #cf2b2b;
+    height: 92px;
+    width: 414px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-family: "Righteous", sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 10px;
+    margin-left: 21px;
+}
+
+.logo-subtitulo {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 18px;
+    margin-left: 21px;
+}
